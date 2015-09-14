@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link href="StyleSheet.css" rel="stylesheet">
+        <script src="Script.js"></script>
+        <title>Nemesis Spotter</title>
+    </head>
+
+    <body>
+        <div class="nav">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="nav nav-tabs">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="about2.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron">
+            <div class="intro">
+               <p class="jumbo-text"> Get Summoner Information!</p><br>
+                <input type="text" id="text1"/>
+                <button onclick="getMatchList()">runApi</button>
+             </div>
+            <p id="output">
+                For example, type "moonbark" for information of the summoner with that id.
+            </p>
+        </div>
+    </body>
+</html>
