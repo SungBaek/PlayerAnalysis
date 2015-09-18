@@ -2,40 +2,39 @@
 body {
     background-size: 100% 100%;
 }
+div {
 
+}
 h1 {
     color : #00ff21;
     background-color:  #00ffaa;
     width: 300px;
 }
-#output {   
-  padding-left: 200px;
-  padding-top: 100px;
-  padding-bottom:  500px;
-  background-color: #00ff90;
-  font-family: 'Courier New';
-  font-size: 30px;
-    
+.outputbox {
+  background-color: #20c335;
+  height: 700px;
+  width: fill-available;
 }
 
-.intro {
+.jumbotron {
     text-align: center;
-    padding-top:  100px;
-    padding-bottom:  100px;
-    background-image: url("http://www.hd-wallpapers.com/download/blue-background_1920x1080_224-hd.jpg");
-    background-position:  40% 40%;
+    background-image: url("http://7-themes.com/data_images/out/34/6886464-green-wallpaper.jpg");
+    background-size: cover;
+    height: 450px;
 }
 .jumbo-text {
     font-size:  50px !important;
-    font-family: Calibri;
+    color: #fff;
+    font-family: sans-serif;
 }
+
 .nav-tabs > li{
     float:none;
     display:inline-block;
 }
 
 .nav-tabs{
-    text-align:center;
+    background-color: #27bd38;
 }
 
 .nav li{
@@ -43,7 +42,20 @@ h1 {
 }
 
 #text1 {
-    width: 200px;
+    width: 300px;
+    height: 50px;
     border-style: double;
-    background-color: #40efc4;
+    background-color: #94de8c;
+    font-size: x-large;
+}
+
+#button1{
+    width: 90px;
+    height: 50px;
+    font-size: x-large;
+    font-family: sans-serif;
+    background-color: #94de8c;
+    border-radius: 5px;
+    border-style: double;
+    border-color: #000;
 }

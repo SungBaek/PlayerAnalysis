@@ -19,11 +19,30 @@ var getMatchHistory = function () {
     console.log(jsonObj);
 }
 
+var getMatch = function (id) {
+    var path = "/na/v2.2/match/" + id;
+    var jsonObj = createRequest(path);
+    console.log(jsonObj);
+}
+
 var getMatchList = function () {
     var id = getSummonerByName();
     var path = "/na/v2.2/matchlist/by-summoner/" + id;
     var jsonObj = createRequest(path);
     console.log(jsonObj);
+    return jsonObj;
+}
+
+var parseMatchList = function () {
+    var jsonList = getMatchList();
+    //for each element in list get the json object of them and store
+    var listHolder = [];
+    //parse the jsonlist and grab the id;
+    var index;
+    for (index = 0; index < jsonList.endIndex && index < 5; index++) {
+        getMatch(jsonList.matches[index].matchId);
+    }
+    console.log(listHolder);
 }
 
 function printJson(obj, name) {

@@ -25,14 +25,11 @@
             </div>
         </div>
         <div class="jumbotron">
-            <div class="intro">
                <p class="jumbo-text"> Change</p><br>
-                <input type="text" id="text1"/>
-                <button onclick="getMatchList()">runApi</button>
-             </div>
-            <p id="output">
-                For example,1 type "moonbark" for information of the summoner with that id.
-            </p>
+                <input type="text" id="text1" placeholder="Summoner ID"/>
+                <button id="button1" onclick="parseMatchList()">runApi</button>
+        </div><div class="outputbox">
+            <p id="output">For example,1 type "moonbark" for information of the summoner with that id.</p>
         </div>
     </body>
 </html>
