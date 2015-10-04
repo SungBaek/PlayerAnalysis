@@ -1,34 +1,61 @@
-
-html {
+body{
     height: 100%;
-    background:  url("http://riot-web-cdn.s3-us-west-1.amazonaws.com/lolesports/s3fs-public/styles/article_image/public/worlds1.jpg?itok=eOUdeHU-") no-repeat center center;
-    background-size: cover;
-}
-
-body {
-    background-size: 100% 100%;
-}
-div {
-
-}
-h1 {
-    color : #00ff21;
-    background-color:  #00ffaa;
-    width: 300px;
 }
 .outputbox {
-  background-color: #20c335;
-  height: 700px;
   width: fill-available;
 }
+.output {
+    position: absolute;
+    top:  50%;
+    left:  50%;
+    margin-top: -250px;
+    margin-left: -450px;
+    width: 900px;
+    height: 500px;
+    background-color: #ff6a00;
+}
+.box {
+    top: 50%;
+}
+.box > img{
+    margin-top: 20px;
+    margin-left: 40px;
+    width:  210px;
+    height: 400px;
+}
 
-.jumbotron {
+.box > #user-name{
     text-align: center;
-    height: 450px;
+    margin-top: 210px;
+    font-size: 50px;
+    font-family: sans-serif;
+}
+.box > #champ{
+   font-size: 20px;
+   margin-left: 100px;
+}
+
+.jumbo{
+    background:  url("http://na.leagueoflegends.com/sites/default/files/styles/scale_large/public/upload/art/bg_champion_lissandra_1920x1080.jpg?itok=6R4z4kxT") no-repeat center center;
+    background-color: #fb9322;
+    background-size: cover;
+    text-align: center;
+    height: 90vh;
+}
+.jumbo-text > #nemesis{
+    display: inline-block;
+    font-weight: bold;
+    font-size:  70px !important;
+}
+.jumbo-text > #spotter{
+    display: inline-block;
+    font-weight: bold;
+    font-size:  70px !important;
 }
 .jumbo-text {
-    font-size:  50px !important;
-    color: #fff;
+    padding-top: 10%;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: White;
     font-family: sans-serif;
 }
 
@@ -38,18 +65,16 @@ h1 {
 }
 
 .nav-tabs{
-    background-color: #27bd38;
 }
 
 .nav li{
-    font-size: 20px;
 }
 
-#text1 {
-    width: 300px;
+#user-input {
+    width: 500px;
     height: 50px;
     border-style: double;
-    background-color: #94de8c;
+    background-color: #efe2b6;
     font-size: x-large;
 }
 
@@ -58,8 +83,8 @@ h1 {
     height: 50px;
     font-size: x-large;
     font-family: sans-serif;
-    background-color: #94de8c;
-    border-radius: 5px;
+    background-color: #20bfc9;
+    border-radius: 3px;
     border-style: double;
     border-color: #000;
 }

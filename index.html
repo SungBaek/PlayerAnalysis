@@ -5,10 +5,12 @@
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://css-spinners.com/css/spinner/pulse.css" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <link href="css/StyleSheet.css" rel="stylesheet">
         <script src="js/riotapi.js"></script>
+        <script src="js/calculator.js"></script>
         <title>Nemesis Spotter</title>
     </head>
 
@@ -24,10 +26,10 @@
                 </div>
             </div>
         </div>
-        <div class="jumbotron">
-               <p class="jumbo-text"> Change</p><br>
-                <input type="text" id="text1" placeholder="Summoner ID"/>
-                <button id="button1" onclick="parseMatchList()">runApi</button>
+        <div class="jumbo">
+               <div class="jumbo-text"> <p id="nemesis">Nemesis Spotter</p></div><br>
+                <input type="text" id="user-input" placeholder="Summoner ID"/>
+                <button id="button1" onclick="openCallPage()">submit</button>
         </div><div class="outputbox">
             <p id="output">For example,1 type "moonbark" for information of the summoner with that id.</p>
         </div>
