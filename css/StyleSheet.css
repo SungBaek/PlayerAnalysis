@@ -1,8 +1,9 @@
 body{
+    padding-top: 50px;
     height: 100%;
 }
-.outputbox {
-  width: fill-available;
+p {
+    
 }
 .output {
     position: absolute;
@@ -12,7 +13,22 @@ body{
     margin-left: -450px;
     width: 900px;
     height: 500px;
-    background-color: #ff6a00;
+    background-color: #f0a660;
+}
+.textbox {
+   display: inline-block;
+   top: 50%
+}
+
+.textbox > p{
+    margin-left: 20px;
+    font-size: 25px;
+}
+.textbox > h1{
+    text-align: center;
+    font-size: 50px;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 .box {
     top: 50%;
@@ -36,11 +52,11 @@ body{
 }
 
 .jumbo{
-    background:  url("http://na.leagueoflegends.com/sites/default/files/styles/scale_large/public/upload/art/bg_champion_lissandra_1920x1080.jpg?itok=6R4z4kxT") no-repeat center center;
+    background:  url("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lissandra_0.jpg") no-repeat center center;
     background-color: #fb9322;
     background-size: cover;
     text-align: center;
-    height: 90vh;
+    height: 100vh;
 }
 .jumbo-text > #nemesis{
     display: inline-block;
@@ -87,4 +103,17 @@ body{
     border-radius: 3px;
     border-style: double;
     border-color: #000;
+}
+
+.banner {
+    text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    
+}
+
+#champ1, #champ2{
+    text-align: center;
+    font-size: 20px;    
+    font-family:  sans-serif;
 }

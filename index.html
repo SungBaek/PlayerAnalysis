@@ -9,29 +9,26 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <link href="css/StyleSheet.css" rel="stylesheet">
+        <script type="text/javascript" src="configure.json"></script>
         <script src="js/riotapi.js"></script>
         <script src="js/calculator.js"></script>
         <title>Nemesis Spotter</title>
     </head>
 
     <body>
-        <div class="nav">
-            <div class="row">
-                <div class="col-md-12">
-                    <ul class="nav nav-tabs">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+            <div class="container">
+                <ul class="nav navbar-nav">
                     <li class="active"><a href="index.html">Home</a></li>
                     <li><a href="about2.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+                </ul>
+             </div>
+        </nav>
         <div class="jumbo">
                <div class="jumbo-text"> <p id="nemesis">Nemesis Spotter</p></div><br>
                 <input type="text" id="user-input" placeholder="Summoner ID"/>
                 <button id="button1" onclick="openCallPage()">submit</button>
-        </div><div class="outputbox">
-            <p id="output">For example,1 type "moonbark" for information of the summoner with that id.</p>
         </div>
     </body>
 </html>

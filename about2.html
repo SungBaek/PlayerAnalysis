@@ -1,31 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://css-spinners.com/css/spinner/pulse.css" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <link href="StyleSheet.css" rel="stylesheet">
-        <script src="Script.js"></script>
-        <title>Bush Spotter - About</title>
+        <link href="css/StyleSheet.css" rel="stylesheet">
+        <script type="text/javascript" src="configure.json"></script>
+        <script src="js/riotapi.js"></script>
+        <script src="js/calculator.js"></script>
+        <title>Nemesis Spotter</title>
 </head>
 <body>
-       <div class="nav">
-            <div class="row">
-                <div class="col-md-12">
-                    <ul class="nav nav-tabs">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+            <div class="container">
+                <ul class="nav navbar-nav">
                     <li><a href="index.html">Home</a></li>
-                    <li class="active"><a href="about2.html">About</a></li>
+                    <li  class="active"><a href="about2.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
+                </ul>
+             </div>
+        </nav>
+        <div class="row">
+            <div class="col-sm-10 textbox">
+                <h1>
+                    How does this work?
+                </h1>
+                <p>
+                    It uses Riot Game's API to pull game data from a summoner's name and analyzes it to calculate win rate of the player
+                    when a certain champion is on the same and when it is on the opposing team. The champion that has the highest win rate
+                    when played with the player is called the angel and the champion that has the lowest win rate when played against the 
+                    player is called the nemesis.
+
+                    First, the application determines the unique userid based on the summoner name provided, then uses the id to make a
+                    api request to access the data point called "match list" which gives a list of matchIDs, and the application uses
+                    each of the matchID to pull from the data to get more detailed match data from Riot Game's API. Then the json object
+                    is parsed and analyzed to determine outputs.
+
+                    Outputs are then generated dynamically using data from DataDragon and DOM manipulation.
+                </p>
+                <p>
+                    If you do not have a League of Legends account then you can test the application by typing
+                    "Retribution12"
+                </p>
             </div>
         </div>
-        <ul class="contact-info">
-            <li>Name : Sung Joon Baek</li>
-            <li>email : joon812@gmail.com</li>
-        </ul>
+
 </body>
 </html>

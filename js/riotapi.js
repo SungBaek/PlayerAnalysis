@@ -1,8 +1,17 @@
 var apiKey = "api_key=470e5c51-ccee-4877-a25a-a9e1507151c4";
-var apiKeyV = "api_key=470e5c51-ccee-4877-a25a-a9e1507151c4";
 var apiServer = "https://na.api.pvp.net/api/lol";
 var region = "/na";
 var imagePath = "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/"
+
+var getKey = function () {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "configure.json", false);
+    xhr.send();
+    console.log("your key is " + JSON.parse(xhr.responseText));
+
+    return JSON.parse(xhr.responseText);
+}
+
 var tester = function () {
     prompt("hello governor!");
     document.getElementById("nuo").innerHTML = "noo";
@@ -197,15 +206,21 @@ function createCall(){
     var idHolder = parseMatchList();
     console.log("parsematchlist completed : " + idHolder);
     //idHolder = ["nemesisID", "angelId"]
+
+    //grab doms
     var nemesisObj = getChampion(idHolder[0]);
     var angelObj = getChampion(idHolder[1]);
     var nemesisImg = document.getElementById("img1");
     var angelImg = document.getElementById("img2");
-    //change url's to correct ones
+    var nemesisName = document.getElementById("champ1");
+    var angelName = document.getElementById("champ2");
+    //set dom attributes
     nemesisImg.setAttribute("src", imagePath + nemesisObj.name + "_0.jpg");
     nemesisImg.setAttribute("alt", "image");
     angelImg.setAttribute("src", imagePath + angelObj.name + "_0.jpg");
     angelImg.setAttribute("alt", "image");
+    nemesisName.innerHTML = nemesisObj.name;
+    angelName.innerHTML = angelObj.name;
     var name = document.getElementById("user-name");
     name.innerHTML = userid;
 }
@@ -221,6 +236,8 @@ var showImage = function (url) {
     //maybe have to specific width, height.
     document.getElementById('body').appendChild("img");
 }
+
+
 var createRequest = function (path) {
 
     //busy loop to slow down the thread, ugly solution :(
